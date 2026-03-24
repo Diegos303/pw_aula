@@ -1,0 +1,23 @@
+<h1>Vitrine</h1>
+<div class="row">
+
+<div *ngFor="let obj of lista" class="card col-sm-12 col-md-4 col-xxl-2">
+    <h4>{{obj.nome}}</h4>
+
+    <img src="img{{obj.codigo}}.jpg" width="100px" class = "card-img-top">
+    <br>
+
+    <div *ngIf="obj.promo < obj.valor">
+        de: R$ {{obj.valor}}
+    </div>
+
+    <div>
+        por: R$ {{obj.promo}}
+    </div>
+
+    <button *ngIf="obj.quantidade > 0" class = "btn btn-outline-success">Comprar</button>
+    <h4 *ngIf="obj.quantidade <= 0">SEM estoque</h4>
+
+    <br>
+    </div>
+</div>

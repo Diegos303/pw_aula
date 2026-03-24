@@ -1,0 +1,19 @@
+<h3>Cadastro</h3>
+<h4>{{alerta}}</h4><br><br>
+
+nome: <input type="text" [(ngModel)]="obj.nome" placeholder="digite seu nome completo" /> <br>
+documento: <input type="text" [(ngModel)]="obj.documento" placeholder="digite seu CPF ou CNH" />
+<br>
+telefone: <input type="text" [(ngModel)]="obj.telefone" placeholder="digite seu telefone" />
+<br>
+logradouro:
+<input type="text" [(ngModel)]="obj.logradouro" placeholder="digite seu endereço" />
+<br>
+data nascimento: <input type="date" [(ngModel)]="obj.dataNascimento" />
+<br>
+email: <input type="email" [(ngModel)]="obj.email" placeholder="digite seu email"/> 
+<br>
+senha: <input type="password" [(ngModel)]="obj.senha" placeholder="digite sua senha"><br><br>
+
+
+<button (click)="cadastrar()">Cadastrar</button>
